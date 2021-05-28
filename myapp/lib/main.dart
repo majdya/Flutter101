@@ -12,6 +12,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
+        // ----- Text -----
         // child: Text(
         //   'Hey ninjas!!',
         //   style: TextStyle(
@@ -20,9 +21,20 @@ class Home extends StatelessWidget {
         //       letterSpacing: 2,
         //       color: Colors.grey[600],
         //       fontFamily: 'IndieFlower'),
-
         // ),
-        child: Image.asset('assets/yuda.jpg'),
+        // ----- Image -----
+        // child: Image.asset('assets/yuda.jpg'),
+        // ----- Icon -----
+        child: TextButton(
+          onPressed: () {},
+          child: Text(
+            'click',
+            style: TextStyle(color: Colors.black),
+          ),
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.lightBlue,
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
