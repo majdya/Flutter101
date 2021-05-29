@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() => runApp(MaterialApp(home: QuoteList()));
 
@@ -8,7 +9,11 @@ class QuoteList extends StatefulWidget {
 }
 
 class _QuoteListState extends State<QuoteList> {
-  List<String> quotes = ['test1', 'test2', 'test3'];
+  List<Quote> quotes = [
+    Quote(author: 'author1', text: "text 1"),
+    Quote(author: 'author2', text: "text 2"),
+    Quote(author: 'author3', text: "text 3"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +24,10 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => Text('$quote')).toList(),
+        children: quotes
+            .map(
+                (quote) => Text('text: ${quote.text}, author: ${quote.author}'))
+            .toList(),
       ),
     );
   }
